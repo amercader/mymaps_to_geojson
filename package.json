@@ -1,0 +1,14 @@
+{
+  "name": "mymaps_to_geojson",
+  "version": "1.0.0",
+  "description": "A small user script to export data displayed in Google MyMaps as a GeoJSON string",
+  "main": "src.js",
+  "scripts": {
+    "build": "bookmarklet src.js bookmarklet.js && sed -ri \"s/<a class=\\\"btn\\\" href=\\\"(.*)\\\">/<a class=\\\"btn\\\" href=\\\"`cat bookmarklet.js `\\\">/g\" index.html"
+  },
+  "author": "Adrià Mercader",
+  "license": "MIT",
+  "dependencies": {
+    "bookmarklet": "^3.0.0"
+  }
+}
