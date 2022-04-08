@@ -13,6 +13,10 @@ function main() {
 
 	  _features.push(...l[12][0][13][0].map(x => {
 
+          if (!x[1][0]) {
+            return;
+          }
+
 		  f = {
 			  "type": "Feature",
 			  "geometry": {
